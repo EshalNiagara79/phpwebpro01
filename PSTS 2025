@@ -1,0 +1,19 @@
+<?php
+function fibonacci($n) {
+    $a = [0, 1]; #ini 2 angka pertamanya si deret fibonacci
+    for ($i = 2; $i < $n; $i++) {
+        $a[] = $a[$i - 1] + $a[$i - 2]; 
+    }
+    return $a;
+}
+
+$n = 30; 
+$hasil = fibonacci($n);
+
+for ($i = 1; $i <= $n; $i++) { 
+    if ($i == 10) {#ini agar nama saya ada di absen 10
+        echo "$i. " . $hasil[$i - 1] . " - <b>Eshal A. N.</b><br>"; #ini nama saya di absen saya 
+    } else {
+        echo "$i. " . $hasil[$i - 1] . "<br>";
+    }
+}
